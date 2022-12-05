@@ -56,7 +56,7 @@
       "Directory" : "ProgramExecution",
       "TaskDescription": "Runs Python Prefetch Parser",
       "RequiredSource": "na",
-      "Tasking": "-i %sourceDirectory% -c -o %destinationDirectory%/prefetcj.csv",
+      "Tasking": "-i %sourceDirectory% -c -o %destinationDirectory%/prefetch.csv",
       "Executable": "pfp/predfetch.py",
       "Caller": "Python3"
     },
