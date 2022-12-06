@@ -150,7 +150,7 @@
       "Executable": "MFTECmd.dll",
       "Caller": "dotnet"
     },
-        {
+    {
       "TaskId": "16",
       "TaskName": "SRUM",
       "Directory" : "ProgramExecution",
@@ -159,6 +159,26 @@
       "RequiredSource": "SOFTWARE",
       "Executable": "SrumECmd.dll",
       "Caller": "dotnet"
+    },
+    {
+      "TaskId": "17",
+      "TaskName": "Powershell-History",
+      "Directory" : "ProgramExecution",
+      "TaskDescription": "Copy Files to output dir",
+      "Tasking": "%requiredSource% %destinationDirectory%",
+      "RequiredSource": "ConsoleHost_history.txt",
+      "Executable": "filecopy",
+      "Caller": "na"
+    },
+    {
+      "TaskId": "18",
+      "TaskName": "SetupAPIdev",
+      "Directory" : "Misc",
+      "TaskDescription": "Copy Files to output dir",
+      "Tasking": "%requiredSource% %destinationDirectory%",
+      "RequiredSource": "setupapi.dev.log",
+      "Executable": "filecopy",
+      "Caller": "na"
     }
   ]
 }
