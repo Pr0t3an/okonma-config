@@ -126,7 +126,7 @@
       "Directory" : "FileSystem",
       "TaskDescription": "Runs Eric Zimmermans MFTCmd on $J",
       "Tasking": "-f '%requiredSource%' --csv %destinationDirectory% --csvf dollarj.csv",
-      "RequiredSource": "$Boot",
+      "RequiredSource": "$J",
       "Executable": "MFTECmd.dll",
       "Caller": "dotnet"
     },
