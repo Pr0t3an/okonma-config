@@ -85,7 +85,7 @@
       "TaskName": "RecentFileCacheParserZim",
       "Directory" : "ProgramExecution",
       "TaskDescription": "Runs Eric Zimmermans RecentFileCacheParser to extrace filenames from bcf",
-      "Tasking": "-f %requiredSource% --csv %destinationDirectory% --csfv recentfilecache.csv",
+      "Tasking": "-f %requiredSource% --csv %destinationDirectory% --csvf recentfilecache.csv",
       "requiredSource": "RecentFilecache.bcf",
       "Executable": "RecentFileCacheParser.dll",
       "Caller": "dotnet"
