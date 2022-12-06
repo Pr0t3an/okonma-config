@@ -90,6 +90,16 @@
       "Executable": "RecentFileCacheParser.dll",
       "Caller": "dotnet"
     },
+        {
+      "TaskId": "10",
+      "TaskName": "ReCmdZim-kroll",
+      "Directory" : "Registry",
+      "TaskDescription": "Runs Eric Zimmermans RECmd tool for Registry Hives",
+      "Tasking": "--bn %rebpath%Kroll_Batch.reb -d %sourceDirectory% --nl --csv %destinationDirectory%",
+      "RequiredSource": "na",
+      "Executable": "RECmd/RECmd.dll",
+      "Caller": "dotnet"
+    },
     {
       "TaskId": "11",
       "TaskName": "ActivitiesCacheParser",
@@ -140,14 +150,14 @@
       "Executable": "MFTECmd.dll",
       "Caller": "dotnet"
     },
-    {
-      "TaskId": "10",
-      "TaskName": "ReCmdZim-kroll",
-      "Directory" : "Registry",
-      "TaskDescription": "Runs Eric Zimmermans RECmd tool for Registry Hives",
-      "Tasking": "--bn %rebpath%Kroll_Batch.reb -d %sourceDirectory% --nl --csv %destinationDirectory%",
-      "RequiredSource": "na",
-      "Executable": "RECmd/RECmd.dll",
+        {
+      "TaskId": "16",
+      "TaskName": "SRUM",
+      "Directory" : "ProgramExecution",
+      "TaskDescription": "Runs Eric Zimmermans SRUM tool",
+      "Tasking": "-d %sourceDirectory% -r %requiredSource% --csv %destinationDirectory%",
+      "RequiredSource": "SOFTWARE",
+      "Executable": "SrumECmd.dll",
       "Caller": "dotnet"
     }
   ]
