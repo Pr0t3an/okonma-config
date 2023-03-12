@@ -56,8 +56,8 @@
       "Directory" : "ProgramExecution",
       "TaskDescription": "Runs Python Prefetch Parser",
       "RequiredSource": "na",
-      "Tasking": "-i %sourceDirectory% -c -o %destinationDirectory%/prefetch.csv",
-      "Executable": "pfp/predfetch.py",
+      "Tasking": "-i %sourceDirectory% -c -o %destinationDirectory%/prefetcj.csv",
+      "Executable": "tbd",
       "Caller": "Python3"
     },
     {
@@ -85,19 +85,9 @@
       "TaskName": "RecentFileCacheParserZim",
       "Directory" : "ProgramExecution",
       "TaskDescription": "Runs Eric Zimmermans RecentFileCacheParser to extrace filenames from bcf",
-      "Tasking": "-f %requiredSource% --csv %destinationDirectory% --csvf recentfilecache.csv",
+      "Tasking": "-f %requiredSource% --csv %destinationDirectory% --csfv recentfilecache.csv",
       "requiredSource": "RecentFilecache.bcf",
       "Executable": "RecentFileCacheParser.dll",
-      "Caller": "dotnet"
-    },
-        {
-      "TaskId": "10",
-      "TaskName": "ReCmdZim-kroll",
-      "Directory" : "Registry",
-      "TaskDescription": "Runs Eric Zimmermans RECmd tool for Registry Hives",
-      "Tasking": "--bn %rebpath%Kroll_Batch.reb -d %sourceDirectory% --nl --csv %destinationDirectory%",
-      "RequiredSource": "na",
-      "Executable": "RECmd/RECmd.dll",
       "Caller": "dotnet"
     },
     {
@@ -136,7 +126,7 @@
       "Directory" : "FileSystem",
       "TaskDescription": "Runs Eric Zimmermans MFTCmd on $J",
       "Tasking": "-f '%requiredSource%' --csv %destinationDirectory% --csvf dollarj.csv",
-      "RequiredSource": "$J",
+      "RequiredSource": "$Boot",
       "Executable": "MFTECmd.dll",
       "Caller": "dotnet"
     },
@@ -151,34 +141,14 @@
       "Caller": "dotnet"
     },
     {
-      "TaskId": "16",
-      "TaskName": "SRUM",
-      "Directory" : "ProgramExecution",
-      "TaskDescription": "Runs Eric Zimmermans SRUM tool",
-      "Tasking": "-d %sourceDirectory% -r %requiredSource% --csv %destinationDirectory%",
-      "RequiredSource": "SOFTWARE",
-      "Executable": "SrumECmd.dll",
+      "TaskId": "10",
+      "TaskName": "ReCmdZim-kroll",
+      "Directory" : "Registry",
+      "TaskDescription": "Runs Eric Zimmermans RECmd tool for Registry Hives",
+      "Tasking": "--bn %rebpath%Kroll_Batch.reb -d %sourceDirectory% --nl --csv %destinationDirectory%",
+      "RequiredSource": "na",
+      "Executable": "RECmd/RECmd.dll",
       "Caller": "dotnet"
-    },
-    {
-      "TaskId": "17",
-      "TaskName": "Powershell-History",
-      "Directory" : "ProgramExecution",
-      "TaskDescription": "Copy Files to output dir",
-      "Tasking": "%requiredSource% %destinationDirectory%",
-      "RequiredSource": "ConsoleHost_history.txt",
-      "Executable": "filecopy",
-      "Caller": "na"
-    },
-    {
-      "TaskId": "18",
-      "TaskName": "SetupAPIdev",
-      "Directory" : "Misc",
-      "TaskDescription": "Copy Files to output dir",
-      "Tasking": "%requiredSource% %destinationDirectory%",
-      "RequiredSource": "setupapi.dev.log",
-      "Executable": "filecopy",
-      "Caller": "na"
     }
   ]
 }
