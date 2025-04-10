@@ -3,7 +3,7 @@
     {
       "TaskId": "1",
       "TaskName": "EvtxECmd",
-      "Directory" : "EventLogs",
+      "Directory" : "EventLogss",
       "TaskDescription": "Runs Eric Zimmermans EvtxCmd",
       "Tasking": "-d %sourceDirectory% --csv %destinationDirectory% --csvf fullevtx.csv",
       "Executable": "EvtxECmd/EvtxECmd.dll",
